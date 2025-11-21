@@ -1,0 +1,235 @@
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+const CaseStudies = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsPerView, setItemsPerView] = useState(1);
+
+  const caseStudies = [
+    {
+      id: 1,
+      companyName: "Tall Oaks",
+      subtitle: "Prabhu Rajamane",
+      logo: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop&crop=center",
+      insight: "Owner",
+      result: "Revlabs helped refine our brand, build genuine community engagement, and increase footfall through strong event marketing.",
+      backgroundColor: "bg-orange-100",
+      link: "/TallOaks",
+    },
+    {
+      id: 2,
+      companyName: "Evo",
+      subtitle: "Shrinidhi Hegde",
+      logo: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&h=300&fit=crop&crop=center",
+      insight: "Co-founder",
+      result: "Beyond planning our launch, Revlabs helped us build a solid social presence and shape our brand direction.",
+      backgroundColor: "bg-green-100",
+      link: "/Evo",
+    },
+    {
+      id: 3,
+      companyName: "Bubbl",
+      subtitle: "Sahil Reddy",
+      logo: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop&crop=center",
+      insight: "CEO",
+      result: "Revlabs helped us grow sales with festive campaigns, tightened our targeting, and rebuilt our website for a smoother experience.",
+      backgroundColor: "bg-orange-100",
+      link: "/CafeSiri",
+    },
+    {
+      id: 4,
+      companyName: "Steam'd",
+      subtitle: "Harman and Divesh",
+      logo: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop&crop=center",
+      insight: "Founders",
+      result: "We came to Revlabs with an idea; they built the brand from scratch and positioned it confidently in a new delivery category in Dubai.",
+      backgroundColor: "bg-orange-100",
+      link: "/RamRathna",
+    },
+    // {
+    //   id: 5,
+    //   companyName: "Domino's India",
+    //   subtitle: "CATERING SERVICE",
+    //   logo: "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop&crop=center",
+    //   insight: "Scaled catering as a service across key metros",
+    //   result: "Expanded to multiple cities",
+    //   backgroundColor: "bg-red-100",
+    //   link: "/dominos-india",
+    // },
+    // {
+    //   id: 6,
+    //   companyName: "Bikanervala",
+    //   subtitle: "OM SWEETS",
+    //   logo: "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=300&fit=crop&crop=center",
+    //   insight: "Took legacy brands online; 6x revenue boost",
+    //   result: "600% revenue increase",
+    //   backgroundColor: "bg-yellow-100",
+    //   link: "/bikanervala",
+    // },
+    // {
+    //   id: 7,
+    //   companyName: "Kitchen Centre",
+    //   subtitle: "KITCHEN-AS-A-SERVICE",
+    //   logo: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop&crop=center",
+    //   insight: "Expanded India's largest kitchen-as-a-service from 6 to 45 locations",
+    //   result: "650% location expansion",
+    //   backgroundColor: "bg-purple-100",
+    //   link: "/kitchen-centre",
+    // },
+    // {
+    //   id: 8,
+    //   companyName: "Story Coffee",
+    //   subtitle: "TALL OAKS / EVO CAFE",
+    //   logo: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&h=300&fit=crop&crop=center",
+    //   insight: "Full-stack branding, D2C strategy, footfall growth",
+    //   result: "Increased footfall and brand recognition",
+    //   backgroundColor: "bg-amber-100",
+    //   link: "/tall-oaks",
+    // },
+    // {
+    //   id: 9,
+    //   companyName: "White Garden",
+    //   subtitle: "CAFE SIRI",
+    //   logo: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop&crop=center",
+    //   insight: "Led brand revamp and digital marketing strategy",
+    //   result: "Successful brand transformation",
+    //   backgroundColor: "bg-emerald-100",
+    //   link: "/cafe-siri",
+    // },
+    // {
+    //   id: 10,
+    //   companyName: "RamRathna",
+    //   subtitle: "RESTAURANT",
+    //   logo: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop&crop=center",
+    //   insight: "Brand repositioning & footfall growth",
+    //   result: "Revenue + visibility increased",
+    //   backgroundColor: "bg-indigo-100",
+    //   link: "/ram-rathna",
+    // },
+  ];
+
+  useEffect(() => {
+    const updateItemsPerView = () => {
+      setItemsPerView(window.innerWidth >= 1024 ? 3 : 1);
+    };
+    updateItemsPerView();
+    window.addEventListener("resize", updateItemsPerView);
+    return () => window.removeEventListener("resize", updateItemsPerView);
+  }, []);
+
+  const maxIndex = Math.max(0, caseStudies.length - itemsPerView);
+
+  const nextSlide = () => setCurrentIndex((prev) => Math.min(prev + 1, maxIndex));
+  const prevSlide = () => setCurrentIndex((prev) => Math.max(prev - 1, 0));
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, staggerChildren: 0.3 } },
+  };
+
+  return (
+    <motion.section
+      className="bg-gray-50 pt-20 px-4 sm:px-6 lg:px-20"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={containerVariants}
+    >
+      <div className="mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <p className="text-primary text-md font-medium uppercase tracking-wider mb-4 font-poppins">
+            CASE STUDIES
+          </p>
+          <h2 className="text-3xl sm:text-5xl font-bold text-text-primary font-poppins">
+            Growth Stories We've Engineered
+          </h2>
+        </div>
+
+        {/* Carousel */}
+        <div className="relative">
+          {/* Navigation */}
+          <button
+            onClick={prevSlide}
+            disabled={currentIndex === 0}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 lg:-translate-x-4 z-10 w-8 h-8 lg:w-12 lg:h-12 bg-white rounded-full shadow-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors"
+          >
+            <svg
+              className="w-4 h-4 lg:w-6 lg:h-6 text-gray-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={nextSlide}
+            disabled={currentIndex === maxIndex}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 lg:translate-x-4 z-10 w-8 h-8 lg:w-12 lg:h-12 bg-white rounded-full shadow-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors"
+          >
+            <svg
+              className="w-4 h-4 lg:w-6 lg:h-6 text-gray-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          {/* Carousel Track */}
+          <div className="overflow-hidden">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}
+            >
+              {caseStudies.map((study) => (
+                <div key={study.id} className="w-full lg:w-1/3 flex-shrink-0 px-2 lg:px-4 mb-8 lg:mb-20">
+                  <div className={`rounded-2xl overflow-hidden h-full ${study.isSpecial ? "border-2 border-primary" : ""}`}>
+                    <div className={`${study.backgroundColor} h-48 lg:h-72 flex items-center justify-center relative`}>
+                      <div className="w-full h-full bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src={study.logo} alt={study.companyName} className="w-full h-full object-cover" />
+                      </div>
+                    </div>
+                    <div className="p-4 lg:p-6 mt-3 lg:mt-5 rounded-lg border-2">
+                      <div className="mb-3 lg:mb-4">
+                        <h3 className="text-primary text-base lg:text-lg font-bold font-poppins">{study.companyName}</h3>
+                        {study.subtitle && (
+                          <p className="text-xs text-gray-500 uppercase tracking-wider font-poppins mt-1">
+                            {study.subtitle}
+                          </p>
+                        )}
+                      </div>
+                      <p className="text-text-secondary text-sm lg:text-md leading-relaxed mb-3 lg:mb-4 font-poppin h-10 lg:h-12">{study.insight}</p>
+                      <div className="mb-4 lg:mb-6">
+                        <div className="bg-primary/5 rounded-lg p-3 lg:p-4">
+                          <p className="text-primary font-semibold text-xs lg:text-sm font-poppins">{study.result}</p>
+                        </div>
+                      </div>
+
+                      {/* Link Button */}
+                      {!study.isSpecial && study.link && (
+                        <Link to={study.link} className="w-full">
+                          <button className="w-full border border-primary text-primary font-semibold py-2 lg:py-3 px-4 lg:px-6 rounded-lg hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center gap-2 font-poppins text-sm lg:text-base">
+                            View Case Study
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                          </button>
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.section>
+  );
+};
+
+export default CaseStudies;
