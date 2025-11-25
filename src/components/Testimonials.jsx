@@ -25,44 +25,44 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Priya Sharma",
-      position: "CO-FOUNDER",
-      company: "EATFRESH",
+      name: "Prabhu Rajamane",
+      position: "Owner",
+      company: "Tall Oaks",
       quote:
-        "RevLabs helped us scale our D2C brand from scratch to ₹5 Cr ARR within six months. The full-stack growth approach—strategy, tech, performance—delivered results faster than we imagined.",
+        "Revlabs helped refine our brand, build genuine community engagement, and increase footfall through strong event marketing.",
       image:
         "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       bgColor: "from-purple-300 to-pink-100",
     },
     {
       id: 2,
-      name: "Rajat Mehra",
+      name: "Sahil Reddy",
       position: "CEO",
-      company: "KITCHEN CENTRE",
+      company: "Bubbl",
       quote:
-        "Beyond launching our cloud kitchen concept digitally, RevLabs completely reimagined our brand positioning and GTM playbook. Customer acquisition is now 3× more efficient than our old model.",
+        "Revlabs helped us grow sales with festive campaigns, tightened our targeting, and rebuilt our website for a smoother experience.",
       image:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       bgColor: "from-blue-300 to-cyan-100",
     },
     {
       id: 3,
-      name: "Neha Kapoor",
-      position: "MARKETING HEAD",
-      company: "DOMINO'S INDIA",
+      name: "Shrinidhi Hegde",
+      position: "Co-Founder",
+      company: "Evo",
       quote:
-        "We approached RevLabs to build our catering vertical at scale. They devised a custom strategy, stood up operations, and helped us open 30+ corporate clients in under 90 days.",
+        "Beyond planning our launch, Revlabs helped us build a solid social presence and shape our brand direction.",
       image:
         "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       bgColor: "from-green-300 to-emerald-100",
     },
     {
       id: 4,
-      name: "Aman Verma",
-      position: "HEAD OF GROWTH",
-      company: "SWIGGY MOMENTS",
+      name: "Harman & Divesh",
+      position: "Founders",
+      company: "Steam’d",
       quote:
-        "Their neutral, operator-led guidance helped us change course quickly. When scaling into marketplaces, the performance engine RevLabs built delivered a 4× increase in monthly orders.",
+        "We came to Revlabs with just an idea; they built the brand from scratch and positioned it confidently in a new delivery category in Dubai.",
       image:
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       bgColor: "from-orange-300 to-yellow-100",

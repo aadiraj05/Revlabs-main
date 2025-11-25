@@ -42,7 +42,7 @@ const Footer = () => {
                   href="#our_services"
                   className="text-white/80 hover:text-white transition-colors font-poppins"
                 >
-                  Strategic Growth Consulting
+                  Growth Strategy & GMT
                 </a>
               </li>
               <li>
@@ -58,7 +58,7 @@ const Footer = () => {
                   href="#our_services"
                   className="text-white/80 hover:text-white transition-colors font-poppins"
                 >
-                  Brand Development & Positioning
+                  Brand Building & Positioning
                 </a>
               </li>
               <li>
@@ -66,7 +66,7 @@ const Footer = () => {
                   href="#our_services"
                   className="text-white/80 hover:text-white transition-colors font-poppins"
                 >
-                  Performance Marketing
+                  D2C & Omni-Channel Playbooks
                 </a>
               </li>
               <li>
@@ -74,17 +74,10 @@ const Footer = () => {
                   href="#our_services"
                   className="text-white/80 hover:text-white transition-colors font-poppins"
                 >
-                  Product & Text Consulting
+                  Creative Content & performance Marketing
                 </a>
               </li>
-              <li>
-                <a
-                  href="#our_services"
-                  className="text-white/80 hover:text-white transition-colors font-poppins"
-                >
-                  Content Strategy & Creation
-                </a>
-              </li>
+             
            
               
             </ul>
@@ -97,7 +90,9 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/revlabs/about/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white/80 hover:text-white transition-colors font-poppins"
                 >
                   About
@@ -105,23 +100,20 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/revlabs/jobs/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white/80 hover:text-white transition-colors font-poppins"
                 >
                   Careers
                 </a>
               </li>
+             
               <li>
                 <a
-                  href="#"
-                  className="text-white/80 hover:text-white transition-colors font-poppins"
-                >
-                  Blogs
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
+                  href="https://wa.me/919639734405"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white/80 hover:text-white transition-colors font-poppins"
                 >
                   Support
@@ -202,7 +194,7 @@ const Footer = () => {
             </h3>{" "}
             <div className="space-y-">
               <div>
-                <p className="text-white/80 font-poppins">hey@revlabs.com</p>
+                <p className="text-white/80 font-poppins">hey@myrevlabs.com</p>
               </div>
 
               <div className="mb-4">

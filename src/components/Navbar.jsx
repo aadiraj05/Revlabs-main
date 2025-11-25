@@ -50,11 +50,11 @@ const Navbar = () => {
     href="https://wa.me/919639734405"
     target="_blank"
     rel="noopener noreferrer"
-    className="w-8 h-8 mb-2 bg-[#4e56f2] rounded-lg flex items-center justify-center transition-colors shadow-sm hover:shadow-md"
+    className="w-11 h-11 mb-2 bg-[#4e56f2] rounded-lg flex items-center justify-center transition-colors shadow-sm hover:shadow-md"
     >
 
     <svg
-                    className="w-4 h-4"
+                    className="w-6 h-6"
                     fill="#ffffff"
                     viewBox="0 0 24 24"
                   >
