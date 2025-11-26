@@ -31,7 +31,7 @@ const Testimonials = () => {
       quote:
         "Revlabs helped refine our brand, build genuine community engagement, and increase footfall through strong event marketing.",
       image:
-        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        "https://img.freepik.com/premium-photo/3d-man-icon-male-figure-human-representation-illustration-logo_762678-58124.jpg?semt=ais_hybrid&w=740&q=80",
       bgColor: "from-purple-300 to-pink-100",
     },
     {
@@ -42,7 +42,7 @@ const Testimonials = () => {
       quote:
         "Revlabs helped us grow sales with festive campaigns, tightened our targeting, and rebuilt our website for a smoother experience.",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671116.jpg",
       bgColor: "from-blue-300 to-cyan-100",
     },
     {
@@ -53,7 +53,7 @@ const Testimonials = () => {
       quote:
         "Beyond planning our launch, Revlabs helped us build a solid social presence and shape our brand direction.",
       image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671153.jpg?semt=ais_hybrid&w=740&q=80",
       bgColor: "from-green-300 to-emerald-100",
     },
     {
@@ -64,7 +64,7 @@ const Testimonials = () => {
       quote:
         "We came to Revlabs with just an idea; they built the brand from scratch and positioned it confidently in a new delivery category in Dubai.",
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd/d95c1f148207527.62d1246c25004.jpg",
       bgColor: "from-orange-300 to-yellow-100",
     },
   ];

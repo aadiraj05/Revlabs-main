@@ -29,7 +29,6 @@ const TermsOfService = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 100;
-      
       for (const section of sections) {
         const element = document.getElementById(section.id);
         if (element) {
@@ -51,14 +50,14 @@ const TermsOfService = () => {
       {/* Navbar Component */}
       <Navbar />
 
-      {/* Header Title Section */}
-      <header className="bg-gradient-to-br from-purple-700 via-purple-600 to-purple-800 text-white">
+      {/* Header Title Section - UPDATED COLOR */}
+      <header className="bg-gradient-to-br from-[#2e38f2] via-[#2e38f2] to-[#4938f2] text-white">
         <div className="max-w-3xl mx-auto text-center py-20 pb-28 px-8">
           <h1 className="text-5xl font-semibold mb-3 tracking-tight">
             Terms of Service
           </h1>
           <p className="text-base opacity-90">
-            Last Updated: [Insert Date]
+            Last Updated: November 26, 2025
           </p>
         </div>
       </header>
@@ -66,7 +65,6 @@ const TermsOfService = () => {
       {/* Main Content Wrapper */}
       <div className="max-w-7xl mx-auto px-8 lg:px-16 -mt-16 pb-16 relative z-10">
         <div className="flex flex-col lg:flex-row gap-8">
-          
           {/* Sidebar Navigation */}
           <aside className="lg:w-80 flex-shrink-0">
             <div className="bg-white rounded-lg shadow-sm sticky top-5 overflow-hidden">
@@ -96,7 +94,7 @@ const TermsOfService = () => {
                 Welcome to RevLabs. By accessing or using our Website (
                 <a href="https://www.myrevlabs.com" className="text-purple-700 hover:opacity-70 transition-opacity">
                   www.myrevlabs.com
-                </a> or revlabs.vercel.app), you agree to these Terms of Service ("Terms"). If you do not agree, please discontinue use.
+                </a> , you agree to these Terms of Service ("Terms"). If you do not agree, please discontinue use.
               </p>
             </div>
 
@@ -326,22 +324,20 @@ const TermsOfService = () => {
       </div>
 
       {/* Footer with Links */}
-      <footer className="bg-gray-900 text-gray-400 py-8">
+      <footer className="bg-[#4938f2] text-white py-8">
         <div className="max-w-7xl mx-auto px-8 lg:px-16 text-center">
           <p className="text-sm mb-2">© 2025 RevLabs. All rights reserved.</p>
           <div className="flex justify-center gap-6 text-sm">
-            <Link to="/" className="hover:text-white transition-opacity">
+             <a  href="/#" className="hover:text-white transition-opacity">
               Home
-            </Link>
-            <Link to="/privacy-policy" className="hover:text-white transition-opacity">
-              Privacy Policy
-            </Link>
-            <Link to="/terms-of-service" className="hover:text-white transition-opacity">
-              Terms of Service
-            </Link>
-            <a href="mailto:hey@myrevlabs.com" className="hover:text-white transition-opacity">
-              Contact
             </a>
+            <Link to="/privacy" className="hover:text-white transition-opacity">Privacy Policy</Link>
+           
+            <a
+             href="https://wa.me/919639734405"
+    target="_blank"
+    rel="noopener noreferrer"
+             className="hover:text-white transition-opacity">Contact</a>
           </div>
         </div>
       </footer>

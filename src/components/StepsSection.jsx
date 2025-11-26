@@ -227,12 +227,12 @@ const StepsSection = () => {
 					);
 
 					const cardColors = [
-  "#7278f2", // Card 1 - lighter blue
-"#d97369", // Card 2 - coral
-"#7278f2", // Card 3 - lighter blue (repeated)
-"#5a76a3", // Card 4 - deep blue
-"#7278f2", // Card 5 - lighter blue (repeated)
-"#d97369", // Card 6 - coral
+"#4938f2", // Card 1 - lighter blue
+"#d97269", // Card 2 - coral
+"#4938f2", // Card 3 - lighter blue (repeated)
+"#d97269", // Card 4 - deep blue
+"#4938f2", // Card 5 - lighter blue (repeated)
+"#d97269", // Card 6 - coral
 ];
 
 

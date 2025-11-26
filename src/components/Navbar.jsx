@@ -5,10 +5,10 @@ const Navbar = () => {
 
   const navItems = [
     // Removed Home
-    { name: "Our Team", href: "#our_team" },
-    { name: "Our Services", href: "#our_services" },
-    { name: "Why choose us", href: "#why_choose" },
-    { name: "Testimonials", href: "#testimonials" },
+    { name: "Our Team", href: "/#our_team" },
+    { name: "Our Services", href: "/#our_services" },
+    { name: "Why choose us", href: "/#why_choose" },
+    { name: "Testimonials", href: "/#testimonials" },
     
   ];
 
@@ -21,7 +21,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-12">
 
             {/* Logo + Text as Home link */}
-            <a href="#" className="flex items-center space-x-2 cursor-pointer">
+            <a href="/#" className="flex items-center space-x-2 cursor-pointer">
               <img
                 src="/Revlabs_logo.png"
                 alt="RevLabs"

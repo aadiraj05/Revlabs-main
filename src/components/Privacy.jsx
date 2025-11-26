@@ -1,28 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const Privacy = () => {
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState("info-collect");
 
   const sections = [
-    { id: 'info-collect', title: 'Information we collect online' },
-    
-    { id: 'how-use', title: 'How we use your information' },
-    { id: 'info-share', title: 'Information we share' },
-    { id: 'data-security', title: 'Data security' },
-    { id: 'third-party', title: 'Third party sites and social media plug-ins' },
-   
-    { id: 'privacy-choices', title: 'Your privacy choices & Rights' },
-    
-    { id: 'privacy-change', title: 'Changes to Privacy' },
-    { id: 'contact', title: 'Contact details' }
+    { id: "info-collect", title: "Information we collect online" },
+    { id: "how-use", title: "How we use your information" },
+    { id: "info-share", title: "Information we share" },
+    { id: "data-security", title: "Data security" },
+    { id: "third-party", title: "Third party sites and social media plug-ins" },
+    { id: "privacy-choices", title: "Your privacy choices & Rights" },
+    { id: "privacy-change", title: "Changes to Privacy" },
+    { id: "contact", title: "Contact details" },
   ];
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
       setActiveSection(sectionId);
     }
   };
@@ -30,12 +30,15 @@ const Privacy = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 100;
-      
+
       for (const section of sections) {
         const element = document.getElementById(section.id);
         if (element) {
           const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
             setActiveSection(section.id);
             break;
           }
@@ -43,8 +46,9 @@ const Privacy = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -52,22 +56,22 @@ const Privacy = () => {
       {/* Navbar Component */}
       <Navbar />
 
-      {/* Header Title Section */}
-      <header className="bg-gradient-to-br from-purple-700 via-purple-600 to-purple-800 text-white">
+      {/* Header / Title Section - UPDATED COLOR */}
+      <header className="bg-gradient-to-br from-[#2e38f2] via-[#2e38f2] to-[#4938f2] text-white">
         <div className="text-center py-20 pb-28 px-8">
+          <p className="uppercase tracking-[0.3em] text-xs md:text-sm font-semibold text-white/80 mb-3">
+            PRIVACY POLICY
+          </p>
           <h1 className="text-5xl font-semibold mb-3 tracking-tight">
             Privacy Policy
           </h1>
-          <p className="text-base opacity-90">
-            Last Updated: [Insert Date]
-          </p>
+          <p className="text-base opacity-90">Last Updated: November 26, 2025</p>
         </div>
       </header>
 
       {/* Main Content Wrapper */}
       <div className="max-w-7xl mx-auto px-8 lg:px-16 -mt-16 pb-16 relative z-10">
         <div className="flex flex-col lg:flex-row gap-8">
-          
           {/* Sidebar Navigation */}
           <aside className="lg:w-80 flex-shrink-0">
             <div className="bg-white rounded-lg shadow-sm sticky top-5 overflow-hidden">
@@ -76,10 +80,10 @@ const Privacy = () => {
                   <div
                     key={section.id}
                     onClick={() => scrollToSection(section.id)}
-                    className={`px-6 py-3.5 text-sm cursor-pointer transition-all border-l-3 ${
+                    className={`px-6 py-3.5 text-sm cursor-pointer transition-all border-l-[3px] ${
                       activeSection === section.id
-                        ? 'bg-purple-50 text-purple-700 border-purple-700 font-medium'
-                        : 'border-transparent text-gray-600 hover:bg-gray-50 hover:text-purple-700'
+                        ? "bg-[#4e56f2]/10 text-[#4e56f2] border-[#4e56f2] font-medium"
+                        : "border-transparent text-gray-600 hover:bg-gray-50 hover:text-[#4e56f2]"
                     }`}
                   >
                     {section.title}
@@ -94,14 +98,23 @@ const Privacy = () => {
             {/* Introduction */}
             <div className="mb-10 pb-8 border-b border-gray-200">
               <p className="text-gray-600 leading-relaxed mb-4">
-                RevLabs ("we", "us", "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website{' '}
-                <a href="https://www.myrevlabs.com" className="text-purple-700 hover:opacity-70 transition-opacity">
+                <span className="font-semibold text-gray-900">RevLabs</span>{" "}
+                (“we”, “us”, “our”) is committed to protecting your privacy.
+                This Privacy Policy explains how we collect, use, and safeguard
+                your information when you visit our website{" "}
+                <a
+                  href="https://www.myrevlabs.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#4e56f2] hover:opacity-70 transition-opacity"
+                >
                   www.myrevlabs.com
-                </a>{' '}
-                or revlabs.vercel.app (the "Website").
+                </a>{" "}
+               
               </p>
               <p className="text-gray-600 leading-relaxed">
-                By using our Website, you consent to the practices described in this policy.
+                By using our Website, you consent to the practices described in
+                this policy.
               </p>
             </div>
 
@@ -110,44 +123,52 @@ const Privacy = () => {
               <h2 className="text-xl font-semibold text-gray-900 mb-5 tracking-tight">
                 1. Information We Collect
               </h2>
+
               <p className="text-gray-600 leading-relaxed mb-4">
                 We may collect the following types of information:
               </p>
 
-              <h3 className="text-lg font-semibold text-gray-800 mt-7 mb-4">
+              <h3
+                id="info-user"
+                className="text-lg font-semibold text-gray-800 mt-7 mb-4"
+              >
                 1.1 Personal Information (Provided by You)
               </h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                When you fill forms, request consultations, or contact us, we may collect:
+                When you fill forms, request consultations, or contact us, we
+                may collect:
               </p>
               <ul className="space-y-2.5 mb-6">
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Name</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Email address</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Phone number</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Company name</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Project details</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Any information you voluntarily share</span>
                 </li>
               </ul>
 
-              <h3 className="text-lg font-semibold text-gray-800 mt-7 mb-4" id="info-automatic">
+              <h3
+                id="info-automatic"
+                className="text-lg font-semibold text-gray-800 mt-7 mb-4"
+              >
                 1.2 Usage Data (Collected Automatically)
               </h3>
               <p className="text-gray-600 leading-relaxed mb-4">
@@ -155,40 +176,45 @@ const Privacy = () => {
               </p>
               <ul className="space-y-2.5 mb-6">
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>IP address</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Browser type</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Device information</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Pages visited</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Time spent on the Website</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Referral sources</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
-                  <span>Cookies & analytics data</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
+                  <span>Cookies &amp; analytics data</span>
                 </li>
               </ul>
 
-              <h3 className="text-lg font-semibold text-gray-800 mt-7 mb-4">
-                1.3 Cookies & Tracking Technologies
+              <h3
+                id="info-cookies"
+                className="text-lg font-semibold text-gray-800 mt-7 mb-4"
+              >
+                1.3 Cookies &amp; Tracking Technologies
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                We use cookies, pixels, and analytics tools (e.g., Google Analytics) to understand user behavior and improve website performance.
+                We use cookies, pixels, and analytics tools (e.g., Google
+                Analytics) to understand user behavior and improve website
+                performance.
               </p>
             </section>
 
@@ -202,26 +228,30 @@ const Privacy = () => {
               </p>
               <ul className="space-y-2.5 mb-6">
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Respond to inquiries and provide services</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Improve our Website and user experience</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
-                  <span>Send updates, proposals, or communication related to our services</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
+                  <span>
+                    Send updates, proposals, or communication related to our
+                    services
+                  </span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Analyse website performance and traffic patterns</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Maintain security and prevent misuse</span>
                 </li>
               </ul>
+
               <div className="bg-yellow-50 border-l-4 border-yellow-500 px-4 py-3 rounded-md my-5">
                 <p className="text-yellow-900 font-medium">
                   We do not sell your personal information.
@@ -229,7 +259,7 @@ const Privacy = () => {
               </div>
             </section>
 
-            {/* Section 3: How We Share Your Information */}
+            {/* Section 3: Information We Share */}
             <section id="info-share" className="mb-12 scroll-mt-20">
               <h2 className="text-xl font-semibold text-gray-900 mb-5 tracking-tight">
                 3. Information We Share
@@ -239,18 +269,21 @@ const Privacy = () => {
               </p>
               <ul className="space-y-2.5 mb-6">
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Service providers (hosting, analytics, CRM tools)</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
-                  <span>Team members and contractors working on your project</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
+                  <span>
+                    Team members and contractors working on your project
+                  </span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Legal authorities (only if required by law)</span>
                 </li>
               </ul>
+
               <div className="bg-yellow-50 border-l-4 border-yellow-500 px-4 py-3 rounded-md my-5">
                 <p className="text-yellow-900 font-medium">
                   We do not share your information for advertising or resale.
@@ -268,25 +301,27 @@ const Privacy = () => {
               </p>
               <ul className="space-y-2.5 mb-6">
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Unauthorized access</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Disclosure</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Alteration</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Misuse</span>
                 </li>
               </ul>
-               <div className="bg-yellow-50 border-l-4 border-yellow-500 px-4 py-3 rounded-md my-5">
+
+              <div className="bg-yellow-50 border-l-4 border-yellow-500 px-4 py-3 rounded-md my-5">
                 <p className="text-yellow-900 font-medium">
-                  However, no system is 100% secure. You use the Website at your own risk.
+                  However, no system is 100% secure. You use the Website at your
+                  own risk.
                 </p>
               </div>
             </section>
@@ -297,41 +332,46 @@ const Privacy = () => {
                 5. Third party sites and social media plug-ins
               </h2>
               <p className="text-gray-600 leading-relaxed">
-                Our Website may contain links to external sites. We are not responsible for their privacy practices or content.
+                Our Website may contain links to external sites. We are not
+                responsible for their privacy practices or content.
               </p>
             </section>
 
             {/* Section 6: Your Choices & Rights */}
             <section id="privacy-choices" className="mb-12 scroll-mt-20">
               <h2 className="text-xl font-semibold text-gray-900 mb-5 tracking-tight">
-                6. Your Privacy Choices & Rights
+                6. Your Privacy Choices &amp; Rights
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
                 You may request to:
               </p>
               <ul className="space-y-2.5 mb-6">
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Access your data</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Update or correct your data</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Delete your data</span>
                 </li>
                 <li className="flex items-start text-gray-600 leading-relaxed">
-                  <span className="text-purple-700 font-bold mr-3 mt-1">•</span>
+                  <span className="text-[#4e56f2] font-bold mr-3 mt-1">•</span>
                   <span>Opt out of communication</span>
                 </li>
               </ul>
               <p className="text-gray-600 leading-relaxed">
-                To do so, email us at:{' '}
-                <a href="mailto:hey@myrevlabs.com" className="text-purple-700 hover:opacity-70 transition-opacity">
+                To do so, email us at{" "}
+                <a
+                  href="mailto:hey@myrevlabs.com"
+                  className="text-[#4e56f2] hover:opacity-70 transition-opacity"
+                >
                   hey@myrevlabs.com
                 </a>
+                .
               </p>
             </section>
 
@@ -341,7 +381,9 @@ const Privacy = () => {
                 7. International Transfer
               </h2>
               <p className="text-gray-600 leading-relaxed">
-                Your data may be processed in locations where we or our service providers operate (India, UAE, etc.). By using our Website, you consent to such transfers.
+                Your data may be processed in locations where we or our service
+                providers operate (India, UAE, etc.). By using our Website, you
+                consent to such transfers.
               </p>
             </section>
 
@@ -351,12 +393,13 @@ const Privacy = () => {
                 8. Changes to This Policy
               </h2>
               <p className="text-gray-600 leading-relaxed">
-                We may update this Privacy Policy at any time. The "Last Updated" date reflects the latest change.
+                We may update this Privacy Policy at any time. The “Last
+                Updated” date reflects the latest change.
               </p>
             </section>
 
             {/* Section 9: Contact Us */}
-            <section id="contact" className="mb-12 scroll-mt-20">
+            <section id="contact" className="mb-4 scroll-mt-20">
               <h2 className="text-xl font-semibold text-gray-900 mb-5 tracking-tight">
                 9. Contact Us
               </h2>
@@ -364,8 +407,11 @@ const Privacy = () => {
                 For privacy-related questions:
               </p>
               <p className="text-base font-medium text-gray-700">
-                📧{' '}
-                <a href="mailto:hey@myrevlabs.com" className="text-purple-700 hover:opacity-70 transition-opacity">
+                📧{" "}
+                <a
+                  href="mailto:hey@myrevlabs.com"
+                  className="text-[#4e56f2] hover:opacity-70 transition-opacity"
+                >
                   hey@myrevlabs.com
                 </a>
               </p>
@@ -375,17 +421,24 @@ const Privacy = () => {
       </div>
 
       {/* Footer with Link to Home */}
-      <footer className="bg-gray-900 text-gray-400 py-8">
+      <footer className="bg-[#4938f2] text-white py-8">
         <div className="max-w-7xl mx-auto px-8 lg:px-16 text-center">
           <p className="text-sm mb-2">© 2025 RevLabs. All rights reserved.</p>
           <div className="flex justify-center gap-6 text-sm">
-            <Link to="/" className="hover:text-white transition-opacity">
+            <a  href="/#" className="hover:text-white transition-opacity">
               Home
+            </a>
+            <Link
+              to="/TermsOfService"
+              className="hover:text-white transition-opacity"
+            >
+             Terms Of Services
             </Link>
-            <Link to="/Privacy" className="hover:text-white transition-opacity">
-              Privacy Policy
-            </Link>
-            <a href="hey@myrevlabs.com" className="hover:text-white transition-opacity">
+            <a
+              href="https://wa.me/919639734405"
+    target="_blank"
+    rel="noopener noreferrer"
+            >
               Contact
             </a>
           </div>
