@@ -4,7 +4,7 @@ import { useRef } from "react";
 const services = [
 	{
 		id: "strategic-growth",
-		title: "Strategic Growth Consulting",
+		title: "Growth Strategy & GTM",
 		description:
 			"Market research, audience segmentation & go-to-market planning to accelerate your business growth with data-driven insights.",
 		features: [
@@ -62,7 +62,7 @@ const services = [
 	},
 	{
 		id: "brand-development",
-		title: "Brand Development & Positioning",
+		title: "Brand Building & Positioning",
 		description:
 			"Craft compelling brand stories that convert & scale, building a strong identity that resonates with your target audience.",
 		features: [
@@ -91,7 +91,7 @@ const services = [
 	},
 	{
 		id: "performance-marketing",
-		title: "Performance Marketing",
+		title: "D2C & Omni-Channel Playbook",
 		description:
 			"Paid ads, SEO, influencer & retention strategy built around ROI to drive measurable growth and maximize your marketing investment.",
 		features: [
@@ -120,7 +120,7 @@ const services = [
 	},
 	{
 		id: "product-tech-consulting",
-		title: "Product & Tech Consulting",
+		title: "Creative & Performance Marketing ",
 		description:
 			"Build scalable digital experiences that drive growth with expert guidance on product strategy and technical architecture.",
 		features: [
@@ -147,35 +147,7 @@ const services = [
 			</svg>
 		),
 	},
-	{
-		id: "content-strategy",
-		title: "Content Strategy & Creation",
-		description:
-			"Creative storytelling that engages and sells, crafting compelling content that resonates with your audience and drives conversions.",
-		features: [
-			"Content Strategy Development",
-			"Creative Storytelling",
-			"Multi-Channel Content Creation",
-			"Content Performance Analytics",
-		],
-		image:
-			"https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-		icon: (
-			<svg
-				className="w-8 h-8 text-white"
-				fill="none"
-				stroke="currentColor"
-				viewBox="0 0 24 24"
-			>
-				<path
-					strokeLinecap="round"
-					strokeLinejoin="round"
-					strokeWidth={1.5}
-					d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-				/>
-			</svg>
-		),
-	},
+	
 ];
 
 const StepsSection = () => {
