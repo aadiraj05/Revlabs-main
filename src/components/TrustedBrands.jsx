@@ -88,7 +88,7 @@ const TrustedBrands = () => {
             TRUSTED BY
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6 font-poppins">
-            30+ Brands Across India & Dubai
+            20+ Brands Across India & Dubai
           </h2>
           <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed font-poppins">
             With a decade of founder-led experience across digital-first startups, consumer brands, and legacy powerhouses, we bring battle-tested growth expertise into RevLabs.

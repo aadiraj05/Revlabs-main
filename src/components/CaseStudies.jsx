@@ -10,7 +10,7 @@ const CaseStudies = () => {
     {
       id: 1,
       companyName: "Tall Oaks",
-      subtitle: "Prabhu Rajamane",
+      
       logo: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop&crop=center",
       insight: "Solving the Discovery Problem, Unlocking Growth.",
       result: "Organic visibility, event-led marketing, and creator strategy delivered 450% growth and consistent weekend sellouts.",
@@ -20,7 +20,7 @@ const CaseStudies = () => {
     {
       id: 2,
       companyName: "Evo",
-      subtitle: "Shrinidhi Hegde",
+      
       logo: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&h=300&fit=crop&crop=center",
       insight: "Crafting a Vegetarian Brand With Cultural Depth.",
       result: "A full-funnel brand build led to organic traction, strong perception, and a sell-out launch weekend.",
@@ -30,7 +30,7 @@ const CaseStudies = () => {
     {
       id: 3,
       companyName: "Cafe Siri",
-      subtitle: "Sahil Reddy",
+      
       logo: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop&crop=center",
       insight: "Fixing the Perception Problem to Unlock Orders.",
       result: "Sharper content, positioning, and offers shifted Café Siri into a high-recall, high-conversion brand.",
@@ -40,7 +40,7 @@ const CaseStudies = () => {
     {
       id: 4,
       companyName: "Ram Rathna",
-      subtitle: "Harman and Divesh",
+     
       logo: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop&crop=center",
       insight: "From a Founder’s Memory to a Neighborhood Brand.",
       result: "We built RamRathna from scratch — identity, menu strategy, local marketing — driving 150% sales growth.",
