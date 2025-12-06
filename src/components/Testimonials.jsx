@@ -58,7 +58,7 @@ const Testimonials = () => {
     },
     {
       id: 4,
-      name: "Harman & Divesh",
+      name: "Harmandeep Khurana",
       position: "Founders",
       company: "Steam’d",
       quote:
@@ -167,10 +167,10 @@ const Testimonials = () => {
               prevTestimonial();
               handleUserInteraction();
             }}
-            className="absolute left-2 lg:left-4 top-1/2 transform -translate-y-1/2 z-30 bg-white/90 hover:bg-white rounded-full p-2 lg:p-3 shadow-lg transition-all duration-300 hover:scale-110"
+            className="absolute left-2 lg:left-4 top-1/2 transform -translate-y-1/2 z-30 bg-transparent hover:bg-white rounded-full p-2 lg:p-3 shadow-lg transition-all duration-300 hover:scale-110"
           >
             <svg
-              className="w-4 h-4 lg:w-6 lg:h-6 text-gray-600"
+              className="w-4 h-4 lg:w-6 lg:h-6 text-gray-900"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -188,10 +188,10 @@ const Testimonials = () => {
               nextTestimonial();
               handleUserInteraction();
             }}
-            className="absolute right-2 lg:right-4 top-1/2 transform -translate-y-1/2 z-30 bg-white/90 hover:bg-white rounded-full p-2 lg:p-3 shadow-lg transition-all duration-300 hover:scale-110"
+            className="absolute right-2 lg:right-4 top-1/2 transform -translate-y-1/2 z-30 bg-transparent hover:bg-white rounded-full p-2 lg:p-3 shadow-lg transition-all duration-300 hover:scale-110"
           >
             <svg
-              className="w-4 h-4 lg:w-6 lg:h-6 text-gray-600"
+              className="w-4 h-4 lg:w-6 lg:h-6 text-gray-900"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -243,17 +243,9 @@ const Testimonials = () => {
                       } rounded-2xl lg:rounded-3xl shadow-xl overflow-hidden`}
                       style={!isMobile ? { left: "calc(50% - 200px)" } : {}}
                     >
-                      <div className="flex h-full flex-col md:flex-row">
-                        {/* Image */}
-                        <div className="w-full md:w-2/5 h-1/3 md:h-full relative">
-                          <img
-                            src={testimonial.image}
-                            alt={testimonial.name}
-                            className="w-full h-full object-cover rounded-t-2xl md:rounded-t-none md:rounded-l-2xl lg:rounded-l-3xl"
-                          />
-                        </div>
+                      <div className="flex h-full flex-col">
                         {/* Content */}
-                        <div className="w-full md:w-3/5 p-4 lg:p-6 flex flex-col justify-center relative h-2/3 md:h-full">
+                        <div className="w-full p-4 lg:p-6 flex flex-col justify-center relative h-full">
                           {/* Quote Icon */}
                           <div className="mb-2">
                             <svg

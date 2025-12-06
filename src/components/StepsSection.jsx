@@ -14,7 +14,7 @@ const services = [
 			"Growth Strategy Development",
 		],
 		image:
-			"https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+			"GrowthStrategy.jpeg",
 		icon: (
 			<svg
 				className="w-8 h-8 text-white"
@@ -43,7 +43,7 @@ const services = [
 			"Revenue Optimization",
 		],
 		image:
-			"https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+			"AggregatorGrowth.jpeg",
 		icon: (
 			<svg
 				className="w-8 h-8 text-white"
@@ -72,7 +72,7 @@ const services = [
 			"Brand Guidelines & Assets",
 		],
 		image:
-			"https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+			"BrandBuilding.jpeg",
 		icon: (
 			<svg
 				className="w-8 h-8 text-white"
@@ -101,7 +101,7 @@ const services = [
 			"Customer Retention Programs",
 		],
 		image:
-			"https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+			"D2C.jpeg",
 		icon: (
 			<svg
 				className="w-8 h-8 text-white"
@@ -130,7 +130,7 @@ const services = [
 			"Digital Experience Optimization",
 		],
 		image:
-			"https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+			"CreativeMarketing.jpeg",
 		icon: (
 			<svg
 				className="w-8 h-8 text-white"
@@ -147,7 +147,7 @@ const services = [
 			</svg>
 		),
 	},
-	
+
 ];
 
 const StepsSection = () => {
@@ -199,13 +199,13 @@ const StepsSection = () => {
 					);
 
 					const cardColors = [
-"#4938f2", // Card 1 - lighter blue
-"#000000", // Card 2 - coral
-"#4938f2", // Card 3 - lighter blue (repeated)
-"#000000", // Card 4 - deep blue
-"#4938f2", // Card 5 - lighter blue (repeated)
-"#000000", // Card 6 - coral
-];
+						"#4938f2", // Card 1 - lighter blue
+						"#000000", // Card 2 - coral
+						"#4938f2", // Card 3 - lighter blue (repeated)
+						"#000000", // Card 4 - deep blue
+						"#4938f2", // Card 5 - lighter blue (repeated)
+						"#000000", // Card 6 - coral
+					];
 
 
 					return (
@@ -230,36 +230,36 @@ const StepsSection = () => {
 									transition={{ duration: 0.8, delay: 0.2 }}
 								>
 									{/* Services Layout - copied exactly from OurServices */}
-									<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+									<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
 										{/* Left Content - Scrollable Sections */}
-										<div className="space-y-32 mb-60 mt-2">
-											<div className="py-10 flex flex-col justify-center">
+										<div className="space-y-8 lg:space-y-32 mb-10 lg:mb-60 mt-2">
+											<div className="py-4 lg:py-10 flex flex-col justify-center">
 												{/* Icon */}
-												<div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mb-8">
+												<div className={`w-12 h-12 lg:w-16 lg:h-16 rounded-xl flex items-center justify-center mb-4 lg:mb-8 ${cardColors[index] === "#000000" ? "bg-primary" : "bg-black"}`}>
 													{service.icon}
 												</div>
 
 												{/* Title */}
-												<h3 className="text-3xl sm:text-4xl font-bold mb-6 font-poppins">
+												<h3 className="text-2xl sm:text-4xl font-bold mb-4 lg:mb-6 font-poppins">
 													{service.title}
 												</h3>
 
 												{/* Description */}
-												<p className="text-gray-300 text-lg mb-8 leading-relaxed font-poppins">
+												<p className="text-gray-300 text-base lg:text-lg mb-6 lg:mb-8 leading-relaxed font-poppins">
 													{service.description}
 												</p>
 
 												{/* Features List */}
-												<div className="space-y-4">
+												<div className="space-y-3 lg:space-y-4">
 													{service.features.map(
 														(feature, featureIndex) => (
 															<div
 																key={featureIndex}
 																className="flex items-center"
 															>
-																<div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+																<div className="w-5 h-5 lg:w-6 lg:h-6 bg-primary rounded-full flex items-center justify-center mr-3 lg:mr-4 flex-shrink-0">
 																	<svg
-																		className="w-3 h-3 text-white"
+																		className="w-2.5 h-2.5 lg:w-3 lg:h-3 text-white"
 																		fill="currentColor"
 																		viewBox="0 0 20 20"
 																	>
@@ -270,7 +270,7 @@ const StepsSection = () => {
 																		/>
 																	</svg>
 																</div>
-																<span className="text-white font-medium font-poppins">
+																<span className="text-white text-sm lg:text-base font-medium font-poppins">
 																	{feature}
 																</span>
 															</div>
@@ -282,8 +282,8 @@ const StepsSection = () => {
 
 										{/* Right Image */}
 										<div className="relative">
-											<div className="h-[60vh] ">
-												<div className="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl h-full w-10/12 relative ml-28 mt-12">
+											<div className="h-[30vh] lg:h-[60vh] ">
+												<div className="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl h-full w-full lg:w-10/12 relative lg:ml-28 mt-4 lg:mt-12">
 													<img
 														src={service.image}
 														alt={service.title}
@@ -292,19 +292,18 @@ const StepsSection = () => {
 
 													{/* Overlay with service indicator */}
 													<div className="absolute bottom-4 left-4 right-4">
-														<div className="bg-black/70 backdrop-blur-sm rounded-lg p-4">
-															<h4 className="text-white font-bold text-lg font-poppins">
+														<div className="bg-black/70 backdrop-blur-sm rounded-lg p-3 lg:p-4">
+															<h4 className="text-white font-bold text-base lg:text-lg font-poppins">
 																{service.title}
 															</h4>
 															<div className="flex space-x-2 mt-2">
 																{services.map((_, serviceIndex) => (
 																	<div
 																		key={serviceIndex}
-																		className={`h-1 rounded-full transition-all duration-300 ${
-																			serviceIndex === index
+																		className={`h-1 rounded-full transition-all duration-300 ${serviceIndex === index
 																				? "bg-primary w-8"
 																				: "bg-gray-400 w-2"
-																		}`}
+																			}`}
 																	/>
 																))}
 															</div>

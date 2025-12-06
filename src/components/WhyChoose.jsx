@@ -10,7 +10,7 @@ const WhyChoose = () => {
       description:
         "Real growth experience from 0 to scale—across startups and legacy brands.",
       image:
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        "Operators.jpeg",
     },
     {
       id: "business-first",
@@ -18,7 +18,7 @@ const WhyChoose = () => {
       description:
         "Neutral, insight-led strategies tailored to your goals—not vendor agendas.",
       image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        "Product.jpeg",
     },
     {
       id: "end-to-end-execution",
@@ -26,7 +26,7 @@ const WhyChoose = () => {
       description:
         "From strategy to marketing to tech—we plug in, build, and scale with you.",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        "Execution.jpeg",
     },
   ];
 
