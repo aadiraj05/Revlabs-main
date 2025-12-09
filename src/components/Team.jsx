@@ -9,7 +9,9 @@ const Team = () => {
       description:
         "Built and scaled brands like 48East (acquired by Swiggy), The Bowl Company, Homely, and Swiggy Daily",
       image:
-        "Siddharth.jpeg",
+
+        "Siddharth.jpeg"
+        
     },
     {
       id: 2,
@@ -19,7 +21,7 @@ const Team = () => {
         "Scaled Domino’s catering, led Kitchen Centre’s growth from 6 to 45 units, and digitized brands like Bikanervala.",
       image:
         "Mukherjee.jpeg",
-    },
+    }
   ];
 
   const containerVariants = {
