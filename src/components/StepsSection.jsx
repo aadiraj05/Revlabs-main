@@ -14,7 +14,7 @@ const services = [
 			"Growth Strategy Development",
 		],
 		image:
-			"GrowthStrategy.jpeg",
+			"GrowthStrategy.png",
 		icon: (
 			<svg
 				className="w-8 h-8 text-white"
@@ -43,7 +43,7 @@ const services = [
 			"Revenue Optimization",
 		],
 		image:
-			"AggregatorGrowth.jpeg",
+			"AggregatorGrowth.png",
 		icon: (
 			<svg
 				className="w-8 h-8 text-white"
@@ -72,7 +72,7 @@ const services = [
 			"Brand Guidelines & Assets",
 		],
 		image:
-			"BrandBuilding.jpeg",
+			"BrandBuilding.png",
 		icon: (
 			<svg
 				className="w-8 h-8 text-white"
@@ -101,7 +101,7 @@ const services = [
 			"Customer Retention Programs",
 		],
 		image:
-			"D2C.jpeg",
+			"D2C.png",
 		icon: (
 			<svg
 				className="w-8 h-8 text-white"
@@ -130,7 +130,7 @@ const services = [
 			"Digital Experience Optimization",
 		],
 		image:
-			"CreativeMarketing.jpeg",
+			"CreativeMarketing.png",
 		icon: (
 			<svg
 				className="w-8 h-8 text-white"

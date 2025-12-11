@@ -10,7 +10,7 @@ const WhyChoose = () => {
       description:
         "Real growth experience from 0 to scale—across startups and legacy brands.",
       image:
-        "Operators.jpeg",
+        "Operators.png",
     },
     {
       id: "business-first",
@@ -26,7 +26,7 @@ const WhyChoose = () => {
       description:
         "From strategy to marketing to tech—we plug in, build, and scale with you.",
       image:
-        "Execution.jpeg",
+        "Execution.png",
     },
   ];
 
